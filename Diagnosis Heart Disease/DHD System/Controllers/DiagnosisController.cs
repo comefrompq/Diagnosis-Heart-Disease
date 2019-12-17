@@ -33,10 +33,10 @@ namespace DHD_System.Controllers
             return PartialView("Choosen", newModel);
         }
         [HttpGet]
-        public IActionResult TreatmentFor(string disase)
+        public IActionResult TreatmentFor(string disease)
         {
             TestViewModel model = new TestViewModel();
-            model.ListOptions = _data.GetTreatmentFor(disase);
+            model.ListOptions = _data.GetTreatmentFor(disease);
 
             return View(model);
         }

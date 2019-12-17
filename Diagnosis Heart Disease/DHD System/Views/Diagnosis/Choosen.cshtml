@@ -7,6 +7,6 @@
 
 @foreach (var item in Model.ListOptions)
 {
-    <a asp-action="TreatMentFor" asp-controller="Diagnosis" >@item</a>
+    <a asp-action="TreatMentFor" asp-controller="Diagnosis" asp-route-Disease=@item>@item</a>
     <br />
 }
