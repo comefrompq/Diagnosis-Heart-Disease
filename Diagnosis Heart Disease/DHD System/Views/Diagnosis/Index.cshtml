@@ -1,0 +1,28 @@
+﻿@model DHD_System.Models.DiagnosisViewModels.TestViewModel
+@{
+    ViewData["Title"] = "DHD system";
+}
+
+<h1>Diagnosis work!</h1>
+<br />
+
+<div class="container py-5">
+    <div class="row">
+        <div class="col-lg-6 mx-auto">
+            <form method="post">
+                <select asp-for="ListOptions" data-style="bg-white rounded-pill px-4 py-3 shadow-sm " class="selectpicker w-100">
+                    @foreach (var item in Model.ListOptions)
+                    {
+                        <option>@item</option>
+                    }
+                </select><!-- End -->
+                <button type="submit" >Find</button>
+                <!-- Multiselect dropdown -->
+
+            </form>
+               
+        </div>
+    </div>
+
+</div>
+

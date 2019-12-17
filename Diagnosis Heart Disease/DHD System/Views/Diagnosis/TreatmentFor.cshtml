@@ -1,0 +1,13 @@
+﻿@model DHD_System.Models.DiagnosisViewModels.TestViewModel
+@{
+    ViewData["Title"] = "TreatmentFor";
+}
+
+<h1>TreatmentFor</h1>
+
+<br />
+
+@foreach (var item in Model.ListOptions)
+{
+    <b>@item</b>
+}

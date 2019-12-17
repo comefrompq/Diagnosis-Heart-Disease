@@ -1,0 +1,12 @@
+﻿@model DHD_System.Models.DiagnosisViewModels.TestViewModel
+@{
+    ViewData["Title"] = "Choosen";
+}
+
+<h1>Choosen</h1>
+
+@foreach (var item in Model.ListOptions)
+{
+    <a asp-action="TreatMentFor" asp-controller="Diagnosis" >@item</a>
+    <br />
+}
