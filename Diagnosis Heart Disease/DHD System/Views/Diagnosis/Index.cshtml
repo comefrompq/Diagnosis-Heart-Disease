@@ -10,13 +10,13 @@
     <div class="row">
         <div class="col-lg-6 mx-auto">
             <form method="post">
-                <select asp-for="ListOptions" data-style="bg-white rounded-pill px-4 py-3 shadow-sm " class="selectpicker w-100">
+                <select asp-for="ListOptions" data-style="bg-white px-4 py-3 shadow-sm " class="selectpicker">
                     @foreach (var item in Model.ListOptions)
                     {
                         <option>@item</option>
                     }
                 </select><!-- End -->
-                <button type="submit" >Find</button>
+                <button type="submit" class="btn btn-outline-primary">Find</button>
                 <!-- Multiselect dropdown -->
 
             </form>
