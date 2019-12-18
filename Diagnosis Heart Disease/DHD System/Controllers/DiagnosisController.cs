@@ -19,26 +19,26 @@ namespace DHD_System.Controllers
         {
             _data = new Data();
         }
-        public IActionResult Index()
+        public IActionResult Diagnosis()
         {
-            TestViewModel options = new TestViewModel();
-            options.ListOptions = new List<String>();
+            DiagnosisViewModel options = new DiagnosisViewModel();
+            options.Symptoms = new List<String>();
             ViewBag.ListOptions = new SelectList(_data.GetAllSymptoms());
             return View(options);
         }
         [HttpPost]
-        public IActionResult Index(TestViewModel model)
+        public IActionResult Diagnosis(DiagnosisViewModel model)
         {
-            TestViewModel newModel = new TestViewModel();
-            newModel.ListOptions = _data.GetDiseases(model.ListOptions);
+            DiagnosisViewModel newModel = new DiagnosisViewModel();
+            newModel.Symptoms = _data.GetDiseases(model.Symptoms);
 
             return PartialView("_DiagnosisPartial", newModel);
         }
         [HttpGet]
         public IActionResult TreatmentFor(string disease)
         {
-            TestViewModel model = new TestViewModel();
-            model.ListOptions = _data.GetTreatmentFor(disease);
+            List<string> model = new List<string>();
+            model = _data.GetTreatmentFor(disease);
 
             return PartialView("_TreatmentPartial", model);
         }

@@ -82,6 +82,7 @@ namespace DHDSystem.Data.Extension
                     }
                 }
             }
+            if (diseases.Count == 0) diseases.Add("No results");
             return diseases;
         }
         public  List<string> GetTreatmentFor(string disease)
@@ -108,6 +109,7 @@ namespace DHDSystem.Data.Extension
                     }
                 }
             }
+            if (treatments.Count == 0) treatments.Add("No results");
             return treatments;
         }
 

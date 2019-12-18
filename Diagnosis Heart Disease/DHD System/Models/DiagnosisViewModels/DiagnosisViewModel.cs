@@ -5,8 +5,8 @@ using System.Threading.Tasks;
 
 namespace DHD_System.Models.DiagnosisViewModels
 {
-    public class TestViewModel
+    public class DiagnosisViewModel
     {
-        public List<string> ListOptions { get; set; } 
+        public List<string> Symptoms { get; set; } 
     }
 }
