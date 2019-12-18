@@ -7,6 +7,6 @@ namespace DHD_System.Models.DiagnosisViewModels
 {
     public class TestViewModel
     {
-        public List<string> ListOptions { get; set; }
+        public List<string> ListOptions { get; set; } 
     }
 }

@@ -7,7 +7,11 @@
 
 <br />
 
-@foreach (var item in Model.ListOptions)
-{
-    <b>@item</b>
-}
+<div class="container">
+    <ul class="list-group">
+        @foreach (var item in Model.ListOptions)
+        {
+            <li class="list-group-item list-group-item-action">@item</li>
+        }
+    </ul>
+</div>

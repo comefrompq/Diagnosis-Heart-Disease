@@ -1,12 +1,16 @@
 ﻿@model DHD_System.Models.DiagnosisViewModels.TestViewModel
+
 @{
     ViewData["Title"] = "Choosen";
 }
 
-<h1>Choosen</h1>
+<h1>Disease</h1>
 
-@foreach (var item in Model.ListOptions)
-{
-    <a asp-action="TreatMentFor" asp-controller="Diagnosis" asp-route-Disease=@item>@item</a>
-    <br />
-}
+<div class="container">
+    <div class="list-group">
+        @foreach (var item in Model.ListOptions)
+        {
+            <a asp-action="TreatMentFor" asp-controller="Diagnosis" asp-route-Disease=@item class="list-group-item list-group-item-action">@item</a>
+        }
+    </div>
+</div>
