@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
 using System.Threading.Tasks;
 using VDS.RDF;
@@ -15,7 +16,7 @@ namespace DHDSystem.Data.Extension
         public Data()
         {
             this._graph = new VDS.RDF.Graph();
-            var file = @"C:\study\Diagnosis Heart Disease\Diagnosis Heart Disease\Heart Disease.owl";
+            var file = Path.Combine(Directory.GetCurrentDirectory(),"wwwroot", "Heart Disease.owl");
             _graph.LoadFromFile(file);
             this._parser = new SparqlQueryParser();
         }
