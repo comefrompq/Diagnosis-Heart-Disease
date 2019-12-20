@@ -89,6 +89,7 @@ namespace DHDSystem.Data.Extension
         {
             List<string> treatments =new  List<string>();
 
+            if (disease == "No results") return new List<string>() { "No results" };
             SparqlParameterizedString query = AddNamespace();
             string q = "SELECT ?treatment WHERE {?treatment uni:treatmentFor uni:" + disease+"}";
             query.CommandText = q;

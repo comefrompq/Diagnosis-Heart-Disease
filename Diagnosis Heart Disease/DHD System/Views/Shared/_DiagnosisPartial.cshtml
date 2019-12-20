@@ -7,12 +7,14 @@
     <div class="list-group">
         @foreach (var item in Model.Symptoms)
         {
-            <a asp-action="TreatMentFor" asp-controller="Diagnosis" asp-route-Disease=@item class="list-group-item list-group-item-action"
-                  data-ajax="true"
-                  data-ajax-method="GET"
-                  data-ajax-mode="replace"
-                  data-ajax-update="#treatment" id="ill">@item</a>
+            <a asp-action="TreatMentFor" asp-controller="Diagnosis" asp-route-Disease=@item class="btn list-group-item list-group-item-action"
+               data-ajax="true"
+               data-ajax-method="GET"
+               data-ajax-mode="replace"
+               data-ajax-update="#treatment" id="ill">@item</a>
         }
     </div>
 }
+
+
 

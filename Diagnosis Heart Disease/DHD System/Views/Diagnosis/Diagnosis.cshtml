@@ -15,7 +15,7 @@
                 <select asp-for="Symptoms" data-style="bg-white px-4 py-3 shadow-sm " class="selectpicker w-75 mx-2" asp-items="@ViewBag.ListOptions" multiple>
                     {
                 </select><!-- End -->
-                <button type="submit" class="btn btn-outline-primary">Diagnosis</button>
+                <button type="submit" class="btn btn-outline-primary" id="submit">Diagnosis</button>
                 <!-- Multiselect dropdown -->
             </form>
         </div>
@@ -36,13 +36,7 @@
         </div>
     </div>
 </div>
-@section scripts
-{
-    <script>
-        $('#ill').on('click', function () {
-            $('#ill').removeClass('active');
-            $(this).addClass('active');
-        })
-    </script>
 
-}
+@section Scripts{
+    @Html.Partial("_DiagnosisPartial")
+ }
