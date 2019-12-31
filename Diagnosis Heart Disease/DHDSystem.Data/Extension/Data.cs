@@ -16,7 +16,7 @@ namespace DHDSystem.Data.Extension
         public Data()
         {
             this._graph = new VDS.RDF.Graph();
-            var file = Path.Combine(Directory.GetCurrentDirectory(),"wwwroot", "Heart Disease.owl");
+            var file = Path.Combine(Directory.GetCurrentDirectory(),"wwwroot", "HeartDisease.owl");
             _graph.LoadFromFile(file);
             this._parser = new SparqlQueryParser();
         }
